@@ -24,3 +24,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Lusitana";
+  src: url("../fonts/lusitana-bold.woff2") format("woff2"),
+    url("../fonts/lusitana-bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,48 @@
+.footer {
+  // padding-left: 214px;
+  // margin-right: 96px;
+  padding-top: 96px;
+  padding-right: 96px;
+  color: $color-default-white;
+  // background-color: $color-blue-2;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 214px;
+  }
+
+  &__column {
+    width: 33%;
+  }
+
+  &__list {
+    @include list-reset();
+
+    &--info {
+      margin-top: 30px;
+      padding-right: 50px;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 24px;
+      }
+
+      p {
+        margin: 0;
+
+        &:first-child {
+          display: block;
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    width: 100%;
+    margin: 64px 0;
+    opacity: 0.4;
+  }
+}

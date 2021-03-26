@@ -1,0 +1,86 @@
+.first-screen {
+  margin-top: -130px;
+  // min-height: 768px;
+  background: $gradient-white-blue;
+
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 1280px;
+    min-height: 768px;
+    margin: 0 auto;
+    padding: 145px 166px 170px;
+    color: $color-blue-1;
+    background-image: url("../img/svg/illustration.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+    @include viewport--xl {
+      background-size: 52%;
+      background-position: right bottom 60px;
+
+    }
+
+    @include viewport--lg {
+      padding: 150px 60px;
+      background-size: 60%;
+      background-position: right bottom;
+    }
+
+    @include viewport--md {
+      padding: 110px 30px;
+      background-position: right bottom;
+    }
+
+    @include viewport--sm {
+      padding: 110px 30px;
+      background-position: right bottom;
+    }
+  }
+
+  &__title {
+    max-width: 610px;
+    margin-bottom: 30px;
+    @include text(64px, 74px, 700);
+    font-family: $font-lusitana;
+
+    @include viewport--xl {
+      @include text(64px, 74px, 700);
+    }
+
+    @include viewport--lg {
+      @include text(30px, 35px, 700);
+
+    }
+
+    @include viewport--md {
+      max-width: 430px;
+      @include text(46px, 55px, 700);
+    }
+
+    @include viewport--sm {
+      @include text(46px, 55px, 700);
+    }
+
+  }
+
+  &__text {
+    max-width: 400px;
+    margin-top: 0;
+    margin-bottom: 71px;
+    @include text(16px, 26px);
+    font-family: $font-gilroy;
+  }
+
+  // &__button {
+  //   min-height: 56px;
+  //   width: 220px;
+  //   border: 0;
+  //   border-radius: 10px;
+  //   background-color: $color-blue-4;
+  //   color: $color-default-white;
+  //   box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  // }
+}

@@ -1,0 +1,12 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  width: 220px;
+  border: 0;
+  border-radius: 10px;
+  background-color: $color-blue-4;
+  color: $color-default-white;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+}

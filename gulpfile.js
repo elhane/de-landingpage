@@ -25,7 +25,7 @@ const pugToHtml = () => {
 };
 
 const css = () => {
-  return gulp.src('source/scss/style.scss')
+  return gulp.src('source/sass/style.scss')
       .pipe(plumber())
       .pipe(sourcemap.init())
       .pipe(sass())

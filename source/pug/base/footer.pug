@@ -1,2 +1,78 @@
 mixin footer(footerMod)
+  -
+    var aboutUsLinks = [
+      {
+        name: "About",
+        url: "#"
+      },
+      {
+        name: "What We Do",
+        url: "#"
+      },
+      {
+        name: "Project",
+        url: "#"
+      },
+      {
+        name: "How It Work With Us",
+        url: "#"
+      },
+    ]
+  -
+    var socialLinks = [
+      {
+        name: "Instagram",
+        url: "#"
+      },
+      {
+        name: "Facebook",
+        url: "#"
+      },
+      {
+        name: "LinkedIn",
+        url: "#"
+      },
+      {
+        name: "Youtube",
+        url: "#"
+      },
+    ]
+  -
+    var contactsLinks = [
+      {
+        name: "T.",
+        type: "tel",
+        url: "+62-812-7313-4321"
+      },
+      {
+        name: "E",
+        type: "mailto",
+        url: "hello.afrian@gmail.com"
+      }
+    ]
+
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
+    .footer__wrapper
+      .footer__column.footer__column--info
+        +icon("logo-with-text", 188, 48)
+        ul.footer__list.footer__list--info
+          li
+            p A.
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          each item in contactsLinks
+            li
+              p #{item.name}
+              a(href=`${item.type}:${item.url}`, type=item.type) #{item.url}
+      .footer__column.footer__column--about
+        h3.footer__column-title About US
+        ul.footer__list
+          each item in aboutUsLinks
+            li
+              a(href=item.url) #{item.name}
+      .footer__column.footer__column--socials
+        h3.footer__column-title Follow US
+        ul.footer__list
+          each item in socialLinks
+            li
+              a(href=item.url) #{item.name}
+      p.footer__copyright 2019 © Afrianska. All rights reserved.
