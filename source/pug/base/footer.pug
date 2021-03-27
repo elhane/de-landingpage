@@ -52,6 +52,7 @@ mixin footer(footerMod)
     ]
 
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
+    include ../components/team.pug
     .footer__wrapper
       .footer__column.footer__column--info
         +icon("logo-with-text", 188, 48)
