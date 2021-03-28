@@ -27,7 +27,7 @@
     width: 26px;
     height: 24px;
     background-color: transparent;
-    background-image: url("../img/sprite/icon-burger.svg");
+    background-image: url("../img/svg/icon-burger.svg");
     background-repeat: no-repeat;
     z-index: 1;
     outline: none;
@@ -67,7 +67,7 @@
 
 .main-nav--open .main-nav__toggle {
   position: relative;
-  background-image: url("../img/sprite/icon-cross.svg");
+  background-image: url("../img/svg/icon-cross.svg");
   z-index: 15;
 }
 

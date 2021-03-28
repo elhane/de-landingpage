@@ -1,0 +1,12 @@
+- var n = 1
+
+section.clients
+  .clients__wrapper.container
+    .clients__inner-wrapper
+      h2.clients__title.section__title Our Beloved Client
+      p.clients__text.section__text.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+    ul.clients__list
+      while n < 8
+        li.clients__item= `LOGO CLIENT ${n++}`
+      li.clients__item More Client
