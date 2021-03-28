@@ -7,15 +7,23 @@
   }
 
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 94px 198px 0 214px;
     margin-right: 96px;
     background-color: $color-blue-2;
+
+    @include viewport--sm {
+      margin-right: 30px;
+    }
+  }
+
+  &__inner-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 94px;
   }
 
   &__column {
     max-width: 280px;
+    margin-bottom: 25px;
 
     &--info {
       margin-right: 119px;
@@ -24,6 +32,10 @@
 
     &--about {
       margin-right: 77px;
+    }
+
+    &--socials {
+      margin-right: 119px;
     }
   }
 

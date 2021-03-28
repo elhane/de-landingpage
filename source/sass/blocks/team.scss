@@ -4,13 +4,36 @@
   background-color: $color-blue-2;
   border-radius: 0 200px 0 0;
 
+  @include viewport--sm {
+    margin-right: 30px;
+  }
+
   &__wrapper {
+    position: relative;
+
+    &::after {
+      @include pseudo();
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: calc(100% - 197px);
+      height: 1px;
+      margin-right: 197px;
+      background-color: rgba(255, 255, 255, 0.4);
+
+      @include viewport--sm {
+        width: calc(100% - 30px);
+      }
+    }
+  }
+
+  &__inner-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 75px 0 84px 214px;
-    margin-right: 197px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    flex-wrap: wrap;
+    padding-top: 75px;
+    padding-bottom: 84px;
   }
 
   &__column {
