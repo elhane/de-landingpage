@@ -1,7 +1,12 @@
 .header {
   max-width: 1280px;
-  padding: 40px;
+  padding: 40px 30px 30px 47px;
   margin: 0 auto;
+
+  @include viewport--sm {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   &__wrapper {
     display: flex;

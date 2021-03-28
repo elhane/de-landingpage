@@ -1,5 +1,5 @@
 .team {
-  margin-right: 96px;
+  // margin-right: 96px;
   color: $color-default-white;
   background-color: $color-blue-2;
   border-radius: 0 200px 0 0;
@@ -34,6 +34,7 @@
     flex-wrap: wrap;
     padding-top: 75px;
     padding-bottom: 84px;
+    padding-left: 79px;
   }
 
   &__column {

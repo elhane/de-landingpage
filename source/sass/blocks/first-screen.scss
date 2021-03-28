@@ -1,86 +1,72 @@
 .first-screen {
-  margin-top: -130px;
-  // min-height: 768px;
+  margin-top: -119px;
   background: $gradient-white-blue;
 
-
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 1280px;
-    min-height: 768px;
-    margin: 0 auto;
-    padding: 145px 166px 170px;
     color: $color-blue-1;
     background-image: url("../img/svg/illustration.svg");
     background-repeat: no-repeat;
-    background-position: right bottom;
-
-    @include viewport--xl {
-      background-size: 52%;
-      background-position: right bottom 60px;
-
-    }
-
-    @include viewport--lg {
-      padding: 150px 60px;
-      background-size: 60%;
-      background-position: right bottom;
-    }
+    background-position: right 7px top 59%;
+    background-size: 51%;
 
     @include viewport--md {
-      padding: 110px 30px;
-      background-position: right bottom;
+      background-size: 60%;
+      background-position: right 0 bottom 0;
     }
 
     @include viewport--sm {
-      padding: 110px 30px;
-      background-position: right bottom;
+      background-size: 80%;
+    }
+  }
+
+  &__inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 768px;
+    padding-top: 145px;
+    padding-left: 37px;
+    padding-bottom: 30px;
+
+    @include viewport--sm {
+      padding-top: 100px;
+      min-height: 100vh;
     }
   }
 
   &__title {
-    max-width: 610px;
+    max-width: 650px;
     margin-bottom: 30px;
     @include text(64px, 74px, 700);
     font-family: $font-lusitana;
-
-    @include viewport--xl {
-      @include text(64px, 74px, 700);
-    }
-
-    @include viewport--lg {
-      @include text(30px, 35px, 700);
-
-    }
+    letter-spacing: 2.7px;
 
     @include viewport--md {
-      max-width: 430px;
-      @include text(46px, 55px, 700);
+      @include text(60px, 70px, 700);
     }
 
     @include viewport--sm {
-      @include text(46px, 55px, 700);
+      @include text(44px, 52px, 700);
     }
-
   }
 
   &__text {
-    max-width: 400px;
+    max-width: 430px;
     margin-top: 0;
-    margin-bottom: 71px;
-    @include text(16px, 26px);
+    margin-bottom: 75px;
     font-family: $font-gilroy;
+    @include text(16px, 26px);
+    letter-spacing: 0.8px;
+
+    @include viewport--sm {
+      margin-bottom: 35px;
+    }
   }
 
-  // &__button {
-  //   min-height: 56px;
-  //   width: 220px;
-  //   border: 0;
-  //   border-radius: 10px;
-  //   background-color: $color-blue-4;
-  //   color: $color-default-white;
-  //   box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
-  // }
+  &__button {
+    font-size: 17px;
+
+    @include viewport--sm {
+      @include text(14px, 18px);
+    }
+  }
 }
