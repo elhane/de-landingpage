@@ -7,8 +7,11 @@
     background-color: $color-blue-4;
   }
 
+  @include viewport--sm {
+    padding-right: 0;
+  }
+
   &__wrapper {
-    // margin-right: 96px;
     background-color: $color-blue-2;
 
     @include viewport--sm {
@@ -21,6 +24,10 @@
     flex-wrap: wrap;
     padding-top: 94px;
     padding-left: 80px;
+
+    @include viewport--sm {
+      padding-left: 30px;
+    }
   }
 
   &__column {

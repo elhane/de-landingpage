@@ -35,6 +35,10 @@
     padding-top: 75px;
     padding-bottom: 84px;
     padding-left: 79px;
+
+    @include viewport--sm {
+      padding-left: 30px;
+    }
   }
 
   &__column {
@@ -49,6 +53,7 @@
   }
 
   &__text {
+    margin-bottom: 50px;
     letter-spacing: 0.3px;
     @include text(17px, 26px);
     opacity: 0.6;
