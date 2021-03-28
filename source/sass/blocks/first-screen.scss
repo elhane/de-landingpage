@@ -1,13 +1,15 @@
 .first-screen {
-  margin-top: -119px;
+  margin-top: -121px;
   background: $gradient-white-blue;
 
   &__wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
     color: $color-blue-1;
     background-image: url("../img/svg/illustration.svg");
     background-repeat: no-repeat;
-    background-position: right 7px top 59%;
-    background-size: 51%;
+    background-position: right 27px top 59%;
+    background-size: 50%;
 
     @include viewport--md {
       background-size: 60%;
@@ -24,7 +26,7 @@
     flex-direction: column;
     min-height: 768px;
     padding-top: 145px;
-    padding-left: 37px;
+    // padding-left: 37px;
     padding-bottom: 30px;
 
     @include viewport--sm {
