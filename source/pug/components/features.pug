@@ -1,0 +1,33 @@
+-
+  var featureItems = [
+    {
+      title: "Bring Technology To Your Comfrotable Home",
+      url: "#",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      class: "home"
+    },
+    {
+      title: "Make Your business To Be Better Famous In Internet",
+      url: "#",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      class: "business"
+    },
+    {
+      title: "Build Your Digital Product That Suitable For Your Need",
+      url: "#",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      class: "product"
+    }
+  ]
+
+section.features
+  .features__wrapper.container
+    h2.features__title.section__title.
+      What we do to help our client grow in digital era
+    ul.features__list
+      each item in featureItems
+        li.features__item(class=`features__item--${item.class}`)
+          h3.features__item-title #{item.title}
+          p.features__item-text #{item.text}
+          a.features__item-link(href="#") Learn more
+            +icon("arrow", 16, 16)
