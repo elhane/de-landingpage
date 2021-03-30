@@ -1,0 +1,18 @@
+mixin inputField(args)
+  -
+    var patterns = {
+      emailPattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$",
+      textPattern: "^[А-Яа-яЁё\s]+$",
+    }
+  - var isRequired = args.required ? true : false
+  - var inputPattern = args.type + "Pattern"
+
+  .form__field
+    label= args.label
+    input(
+      type= args.type,
+      name= args.name ? args.name : null,
+      id= args.id ? args.id : null,
+      pattern= patterns[inputPattern],
+      placeholder=args.placeholder,
+      required= isRequired)

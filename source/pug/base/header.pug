@@ -2,7 +2,7 @@ mixin header(headerMod, currentPage)
   -
     var headerLinks = [
       {
-        href: "#",
+        href: "contacts.html",
         text: "Contact us"
       },
       {
@@ -17,7 +17,7 @@ mixin header(headerMod, currentPage)
         a.header__logo
           +icon('logo', 48, 48)
       else
-        a.header__logo(href="main.html", aria-label="Переход на главную")
+        a.header__logo(href="index.html", aria-label="Переход на главную")
           +icon('logo', 48, 48)
 
       nav.main-nav

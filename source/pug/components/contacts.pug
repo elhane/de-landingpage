@@ -1,0 +1,34 @@
+section.contacts
+      .contacts__top
+        .container
+          h1.contacts__title Contact Us
+          p.contacts__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .contacts__content.container
+        .contacts__column.contacts__column--left
+          ul.contacts__list
+            li.contacts__item
+              h2 ADDRESS
+              p Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.
+            li.contacts__item
+              h2 PHONE
+              a.contacts__link(href="tel:+6281273134321")
+                +icon("icon-phone", 18, 18)
+                span +62-812-7313-4321
+              a.contacts__link(href="tel:+628170001234")
+                +icon("icon-phone", 18, 18)
+                span +62-817-000-1234
+            li.contacts__item
+              h2 ONLINE SERVICE
+              a.contacts__link(href="www.afrianska.com")
+                +icon("icon-www", 20, 20)
+                span www.afrianska.com
+              a.contacts__link.contacts__link--mail(href="mailto:hello.afrian@gmail.com")
+                +icon("icon-mail", 20, 16)
+                span hello.afrian@gmail.com
+        .contacts__column.contacts__column--right
+          form.contacts__form.form(action="")
+            h2.form__title SEND US MESSAGE
+            +inputField({type: "text", name: "name", placeholder: "Your Name", required: true, label: "Full Name"})
+            +inputField({type: "email", name: "email", placeholder: "Your Email", label: "Email"})
+            +textareaField("Message", "message", "Your Message")
+            +button("submit", "SUBMIT", "form__button")

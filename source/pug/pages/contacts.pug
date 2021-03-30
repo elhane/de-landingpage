@@ -1,0 +1,17 @@
+extends ../base/layout
+
+block variables
+  - var title = "Afrianska"
+  - var hasHeader = true
+  - var hasFooter = true
+  - var currentPage = ""
+  - var footerMod = ""
+  //- - var phonesList = [{tel: "+62-812-7313-4321", url: "+6281273134321"}]
+  //- - var servicesList = [{tel: "+62-812-7313-4321", url: "+6281273134321"}]
+
+block main
+  main
+    include ../components/contacts.pug
+    include ../components/map.pug
+
+
