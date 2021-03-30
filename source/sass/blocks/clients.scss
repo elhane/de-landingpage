@@ -94,4 +94,18 @@
       }
     }
   }
+
+  &__link {
+    transition: $default-transition-settings;
+
+    &:hover {
+      display: block;
+      color: $color-blue-1;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }

@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     text-align: center;
     color: $color-default-white;
+    background-color: $color-blue-4;
   }
 
   &__title {
@@ -50,7 +51,6 @@
       flex-basis: 540px;
       flex-grow: 1;
       max-width: 540px;
-      // flex-shrink: 1;
     }
 
     @include viewport--md {
@@ -105,22 +105,22 @@
     @include text(16px, 26px, 300);
     color: $color-blue-1;
 
-    h2 {
-      margin-bottom: 16px;
-      @include text(20px, 30px, 600);
-    }
-
-    p {
-      margin-top: 9px;
-      opacity: 0.6;
-    }
-
     @include viewport--sm {
       align-items: center;
+    }
+  }
 
-      p {
-        max-width: 300px;
-      }
+  &__item-title {
+    margin-bottom: 16px;
+    @include text(20px, 30px, 600);
+  }
+
+  &__item-text {
+    margin-top: 9px;
+    opacity: 0.6;
+
+    @include viewport--sm {
+      max-width: 300px;
     }
   }
 
@@ -130,10 +130,32 @@
     margin-top: 10px;
     margin-bottom: 7px;
     padding-left: 3px;
-    opacity: 0.6;
+    color: $color-blue-transparent;
+    transition: $default-transition-settings;
 
     svg {
       margin-right: 19px;
+      min-width: 19px;
+      min-height: 19px;
+      fill: $color-blue-1;
+    }
+
+    &:hover {
+      span {
+        display: block;
+        color: $color-blue-1;
+        transform: scale(1.1);
+      }
+
+      svg {
+        fill: $color-blue-4;
+      }
+    }
+
+    &:active {
+      span {
+        color: $color-blue-4;
+      }
     }
   }
 }

@@ -26,8 +26,7 @@
     flex-direction: column;
     min-height: 768px;
     padding-top: 145px;
-    // padding-left: 37px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 
     @include viewport--sm {
       padding-top: 100px;
@@ -65,6 +64,7 @@
   }
 
   &__button {
+    align-self: flex-start;
     font-size: 17px;
 
     @include viewport--sm {

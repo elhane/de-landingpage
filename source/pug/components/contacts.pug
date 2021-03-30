@@ -7,10 +7,10 @@ section.contacts
         .contacts__column.contacts__column--left
           ul.contacts__list
             li.contacts__item
-              h2 ADDRESS
-              p Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.
+              h2.contacts__item-title ADDRESS
+              p.contacts__item-text Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.
             li.contacts__item
-              h2 PHONE
+              h2.contacts__item-title PHONE
               a.contacts__link(href="tel:+6281273134321")
                 +icon("icon-phone", 18, 18)
                 span +62-812-7313-4321
@@ -18,7 +18,7 @@ section.contacts
                 +icon("icon-phone", 18, 18)
                 span +62-817-000-1234
             li.contacts__item
-              h2 ONLINE SERVICE
+              h2.contacts__item-title ONLINE SERVICE
               a.contacts__link(href="www.afrianska.com")
                 +icon("icon-www", 20, 20)
                 span www.afrianska.com
@@ -26,7 +26,7 @@ section.contacts
                 +icon("icon-mail", 20, 16)
                 span hello.afrian@gmail.com
         .contacts__column.contacts__column--right
-          form.contacts__form.form(action="")
+          form.contacts__form.form(action="" method="post")
             h2.form__title SEND US MESSAGE
             +inputField({type: "text", name: "name", placeholder: "Your Name", required: true, label: "Full Name"})
             +inputField({type: "email", name: "email", placeholder: "Your Email", label: "Email"})

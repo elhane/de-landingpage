@@ -14,10 +14,12 @@
   }
 
   &__link {
+    display: block;
     transition: $default-transition-settings;
 
     &:hover {
       color: $color-blue-1;
+      transform: scale(1.1);
     }
   }
 
@@ -36,10 +38,7 @@
 
     &:hover {
       opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
+      transform: scale(1.3);
     }
   }
 }

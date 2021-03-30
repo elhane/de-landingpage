@@ -63,7 +63,7 @@
 
       &::before {
         top: 43px;
-        left: calc(50% - 95px); // 67px;
+        left: 64px;
         width: 190px;
         height: 132px;
         background-image: url("../img/svg/business.svg");
@@ -75,7 +75,7 @@
 
       &::before {
         top: -23px;
-        left: calc(50% - 120px); //78px;
+        left: 75px;
         width: 239px;
         height: 208px;
         background-image: url("../img/svg/home.svg");
@@ -87,7 +87,7 @@
 
       &::before {
         top: 43px;
-        left: calc(50% - 89px); //79px;
+        left: 79px;
         width: 178px;
         height: 140px;
         background-image: url("../img/svg/product.svg");
@@ -112,7 +112,7 @@
 
   &__item-text {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     @include text(16px, 26px);
     opacity: 0.6;
 
@@ -127,9 +127,20 @@
     margin-top: auto;
     @include text(14px, 30px, 600);
     color: $color-blue-4;
+    transition: $default-transition-settings;
 
     svg {
       margin-left: 29px;
+      fill: $color-blue-4;
+    }
+
+    &:hover {
+      transform: translate(5px);
+      color: $color-blue-1;
+
+      svg {
+        fill: $color-blue-1;
+      }
     }
   }
 }

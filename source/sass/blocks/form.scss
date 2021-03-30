@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   padding: 54px 56px 56px;
-  // width: 540px;
-  // flex-basis: 540px;
   width: 100%;
   min-height: 800px;
   background-color: $color-default-white;
@@ -11,10 +9,6 @@
   border-radius: 10px;
   color: $color-blue-1;
   letter-spacing: 0.8px;
-
-  // @include viewport--md {
-  //   padding: 40px;
-  // }
 
   @include viewport--sm {
     padding: 30px;
@@ -26,7 +20,6 @@
     margin-bottom: 48px;
     @include text(20px, 30px, 600);
     letter-spacing: 0.8px;
-    // color: $color-blue-1;
   }
 
   &__field {
@@ -62,10 +55,16 @@
       height: 144px;
       resize: none;
     }
+
+    &--error input,
+    &--error textarea {
+      border-color: $color-red;
+    }
   }
 
   &__button {
     margin-top: auto;
+    max-width: unset;
     width: 100%;
     min-height: 72px;
     @include text(16px, 26px, 600);

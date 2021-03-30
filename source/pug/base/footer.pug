@@ -64,17 +64,17 @@ mixin footer(footerMod)
             each item in contactsLinks
               li
                 p #{item.name}
-                a(href=`${item.type}:${item.url}`, type=item.type) #{item.url}
+                a.footer__link(href=`${item.type}:${item.url}`, type=item.type) #{item.url}
         .footer__column.footer__column--about
           h3.footer__column-title About US
           ul.footer__list
             each item in aboutUsLinks
               li
-                a(href=item.url) #{item.name}
+                a.footer__link(href=item.url) #{item.name}
         .footer__column.footer__column--socials
           h3.footer__column-title Follow US
           ul.footer__list
             each item in socialLinks
               li
-                a(href=item.url) #{item.name}
+                a.footer__link(href=item.url) #{item.name}
         p.footer__copyright 2019 © Afrianska. All rights reserved.

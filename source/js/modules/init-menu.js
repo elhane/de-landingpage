@@ -29,7 +29,6 @@ const initMenu = () => {
       })
 
       document.addEventListener('keydown', (evt) => {
-        console.log(evt.key);
         if (evt.key === 'Escape') {
           evt.preventDefault();
           closeMenu();

@@ -8,5 +8,7 @@ section.clients
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
     ul.clients__list
       while n < 8
-        li.clients__item= `LOGO CLIENT ${n++}`
-      li.clients__item More Client
+        li.clients__item
+          a.clients__link(href="#")= `LOGO CLIENT ${n++}`
+      li.clients__item
+        a.clients__link(href="#") More Client
