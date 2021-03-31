@@ -740,8 +740,7 @@ img {
     padding-bottom: 60px; }
     @media (max-width: 767px) {
       .first-screen__inner-wrapper {
-        padding-top: 100px;
-        min-height: 100vh; } }
+        padding-top: 100px; } }
   .first-screen__title {
     max-width: 650px;
     margin-bottom: 30px;
