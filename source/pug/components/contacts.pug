@@ -26,9 +26,4 @@ section.contacts
                 +icon("icon-mail", 20, 16)
                 span hello.afrian@gmail.com
         .contacts__column.contacts__column--right
-          form.contacts__form.form(action="" method="post")
-            h2.form__title SEND US MESSAGE
-            +inputField({type: "text", name: "name", placeholder: "Your Name", required: true, label: "Full Name"})
-            +inputField({type: "email", name: "email", placeholder: "Your Email", label: "Email"})
-            +textareaField("Message", "message", "Your Message")
-            +button("submit", "SUBMIT", "form__button")
+          include ../components/form.pug

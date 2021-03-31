@@ -1,0 +1,6 @@
+form.form(action="https://echo.htmlacademy.ru/courses" method="post")
+  h2.form__title SEND US MESSAGE
+  +inputField({type: "text", name: "name", placeholder: "Your Name", required: true, label: "Full Name"})
+  +inputField({type: "email", name: "email", placeholder: "Your Email", label: "Email"})
+  +textareaField("Message", "message", "Your Message")
+  button.button.form__button(type="submit" data-modal="success") SUBMIT

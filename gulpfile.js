@@ -15,8 +15,8 @@ const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const pug = require('gulp-pug');
 const cached = require('gulp-cached');
-var ghPages = require('gh-pages');
-var path = require('path');
+// const ghPages = require('gh-pages');
+// const path = require('path');
 
 const pugToHtml = () => {
   return gulp.src('source/pug/pages/*.pug')
@@ -144,14 +144,15 @@ const optimizeImages = () => {
       .pipe(gulp.dest('build/img'));
 };
 
+// gh-pages
+// function deploy(cb) {
+//   ghPages.publish(path.join(process.cwd(), './build'), cb);
+// }
+// exports.deploy = deploy;
+
 exports.build = build;
 exports.start = start;
 exports.webp = createWebp;
 exports.imagemin = optimizeImages;
 
-// gh-pages
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
 

@@ -52,7 +52,6 @@ const setModalListeners = (modal, closeCallback, preventScrollLock) => {
 
 const setupModal = (modal, closeCallback, modalBtns, openCallback, noPrevDefault, preventScrollLock) => {
   if (modalBtns) {
-
     modalBtns.forEach((btn) => {
       btn.addEventListener('click', (evt) => {
         if (!noPrevDefault) {
