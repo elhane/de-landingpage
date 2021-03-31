@@ -22,6 +22,8 @@
   <body>
     <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow" viewBox="0 0 16 16">
 <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"/>
+</symbol><symbol id="icon-cross" viewBox="0 0 20 20">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.60645 7.48529L2.12109 0L0 2.12132L7.48535 9.60649L0.121094 16.9706L2.24219 19.0919L9.60645 11.7277L16.9707 19.0919L19.0918 16.9706L11.7275 9.60649L19.2129 2.12132L17.0918 0L9.60645 7.48529Z" fill="#5A98D0"/>
 </symbol><symbol id="icon-mail" viewBox="0 0 20 16">
 <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"/>
 </symbol><symbol id="icon-phone" viewBox="0 0 18 18">
@@ -92,7 +94,7 @@
               </ul>
             </div>
             <div class="contacts__column contacts__column--right">
-              <form class="contacts__form form" action="" method="post">
+              <form class="form" action="https://echo.htmlacademy.ru/courses" method="post">
                 <h2 class="form__title">SEND US MESSAGE</h2>
                 <div class="form__field">
                   <label>Full Name</label>
@@ -106,7 +108,7 @@
                   <label>Message</label>
                   <textarea name="message" placeholder="Your Message" rows="30"></textarea>
                 </div>
-                <button class="button form__button" type="submit">SUBMIT</button>
+                <button class="button form__button" type="submit" data-modal="success">SUBMIT</button>
               </form>
             </div>
           </div>
@@ -122,7 +124,7 @@
               <div class="team__column">
                 <h2 class="team__title section__title">Intersted to work with our team?</h2>
                 <p class="team__text section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-              </div><a class="team__button button" href="#">Let’s Talk</a>
+              </div><a class="team__button button" href="#" data-modal="message">Let’s Talk</a>
             </div>
           </div>
         </section>
@@ -167,6 +169,47 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--message modal--no-scale modal--fit-content">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <form class="form form--message" action="https://echo.htmlacademy.ru/courses" method="post">
+            <h2 class="form__title">SEND US MESSAGE</h2>
+            <div class="form__field">
+              <label>Full Name</label>
+              <input type="text" name="name" pattern="^[А-Яа-яЁёs]+$" placeholder="Your Name" required="required"/>
+            </div>
+            <div class="form__field">
+              <label>Email</label>
+              <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" placeholder="Your Email"/>
+            </div>
+            <div class="form__field">
+              <label>Message</label>
+              <textarea name="message" placeholder="Your Message" rows="30"></textarea>
+            </div>
+            <button class="button form__button" type="submit" data-modal="success">SUBMIT</button>
+          </form>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content">
+      <div class="modal__wrapper">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <h2 class="modal__text">Your message has been sent successfully</h2>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап">
+            <svg width="25" height="25" aria-hidden="true">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
