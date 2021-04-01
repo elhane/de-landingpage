@@ -24,6 +24,7 @@ const validateForm = () => {
             if (modalMessage.classList.contains('modal--active')) {
               closeModal(modalMessage);
             }
+            form.submit();
             openModal(modalSuccess);
             closeBtn.addEventListener('click', () => {
               closeModal(modalSuccess);
